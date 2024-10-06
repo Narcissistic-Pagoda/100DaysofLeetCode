@@ -2,11 +2,11 @@
 
 class Solution:
     def removeDuplicates(self, nums:list[int]) -> int:
-        l = 1
-        for r in range(1, len(nums)):
-            if nums[r] != nums[r-1]:
-                nums[l] = nums[r]
-                l += 1
+        l = 1 #initialize left pointer
+        for r in range(1, len(nums)): #initialize right pointer
+            if nums[r] != nums[r-1]: #check if duplicate
+                nums[l] = nums[r] #if so, update nums[l] with new unique element
+                l += 1 #increment l
         return l
 
 # Create an instance of the Solution class
